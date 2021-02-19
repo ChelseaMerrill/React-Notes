@@ -1,3 +1,5 @@
+import './App.css';
+
 let studentData = [
   {
   id: 1,
@@ -43,7 +45,15 @@ let studentData = [
   },
   ];
 
-function App() {
+function App(){
+  return(
+    <div>
+      <StudentList/>
+    </div>
+  );
+}
+
+function StudentList(){
   return studentData.map((student)=> (
     <div className= 'card'>
       <p>ID#: {student.id}</p>
@@ -51,7 +61,7 @@ function App() {
       <p>Favorite Color: {student.color}</p>
       <p>{student.name} is a {student.school} student</p>
     </div>
-  ))
+  ));
 }
 
 export default App;
